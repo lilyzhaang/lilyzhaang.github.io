@@ -154,3 +154,6 @@ html.lb-open{overflow:hidden; scrollbar-gutter:stable;}
   .side-photo{will-change:auto;}
   .photo-win, .photo-win.closed{transform:none;}
 }
+
+.hero h1 .scatter-word{display:inline-block; white-space:nowrap;}
+.hero h1 .scatter-letter{display:inline-block; will-change:transform;}
