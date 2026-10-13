@@ -157,3 +157,23 @@ html.lb-open{overflow:hidden; scrollbar-gutter:stable;}
 
 .hero h1 .scatter-word{display:inline-block; white-space:nowrap;}
 .hero h1 .scatter-letter{display:inline-block; will-change:transform;}
+
+/* Theme switch: the new theme is revealed through a huge, soft ellipse centered below the page.
+   theme.js sets the shape (--sun-w, --sun-drop, --sun-soft) and animates its height (--sun). */
+@property --sun{syntax:'<length>'; inherits:true; initial-value:0px;}
+::view-transition-old(root), ::view-transition-new(root){animation:none; mix-blend-mode:normal;}
+/* Sunrise: the light theme fills the growing ellipse. */
+:root[data-theme-anim="sunrise"]::view-transition-new(root){
+  -webkit-mask-image:radial-gradient(ellipse calc(var(--sun) * var(--sun-w)) var(--sun) at 50% calc(100% + var(--sun-drop)), #000 var(--sun-soft), transparent 100%);
+  mask-image:radial-gradient(ellipse calc(var(--sun) * var(--sun-w)) var(--sun) at 50% calc(100% + var(--sun-drop)), #000 var(--sun-soft), transparent 100%);
+}
+/* Sunset: the dark theme closes in as the ellipse sinks. */
+:root[data-theme-anim="sunset"]::view-transition-new(root){
+  -webkit-mask-image:radial-gradient(ellipse calc(var(--sun) * var(--sun-w)) var(--sun) at 50% calc(100% + var(--sun-drop)), transparent var(--sun-soft), #000 100%);
+  mask-image:radial-gradient(ellipse calc(var(--sun) * var(--sun-w)) var(--sun) at 50% calc(100% + var(--sun-drop)), transparent var(--sun-soft), #000 100%);
+}
+/* The glow (drawn by theme.js) sits on the soft edge of the same ellipse. */
+.theme-glow{position:fixed; inset:0; pointer-events:none; view-transition-name:theme-glow;}
+::view-transition-group(theme-glow){animation:none; mix-blend-mode:screen;}
+::view-transition-old(theme-glow){display:none;}
+::view-transition-new(theme-glow){animation:none;}
