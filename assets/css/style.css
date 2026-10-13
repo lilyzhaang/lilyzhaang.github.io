@@ -24,7 +24,7 @@ a{text-decoration-thickness:1px; text-underline-offset:2px;}
 .mono{font-family:'Space Mono',monospace;}
 .wrap{max-width:720px; margin:0 auto; padding:0 24px;}
 
-header{position:sticky; top:0; z-index:10; background:transparent; backdrop-filter:blur(6px);}
+header{position:sticky; top:0; z-index:10; background:var(--win-solid); border-bottom:1px solid var(--ink);}
 .headbar{max-width:720px; margin:0 auto; padding:14px 24px; display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px 18px;}
 .logotype{font-family:'Space Mono',monospace; font-weight:700; font-size:15px;}
 a.logotype, a.logotype:visited{color:var(--ink); text-decoration:none; border-bottom:1px solid transparent;}
@@ -32,7 +32,7 @@ a.logotype:hover{border-bottom:1px solid var(--ink);}
 nav.mono{font-size:13px; display:flex; align-items:center; gap:16px;}
 nav.mono a{color:var(--ink); text-decoration:none; border-bottom:1px solid transparent;}
 nav.mono a:hover{border-bottom:1px solid var(--ink);}
-.theme-btn{background:none; border:1px solid var(--card-line); color:var(--ink); font-size:13px; width:28px; height:28px; cursor:pointer; font-family:'Space Mono',monospace;}
+.theme-btn{background:none; border:1px solid var(--ink); color:var(--ink); font-size:13px; width:28px; height:28px; cursor:pointer; font-family:'Space Mono',monospace;}
 .theme-btn:hover{background:var(--card);}
 
 .hero{max-width:720px; margin:0 auto; padding:64px 24px 64px; border-bottom:1px dashed var(--line);}
