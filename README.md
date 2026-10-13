@@ -5,13 +5,20 @@ separate long-form section. GitHub Pages builds Jekyll sites automatically —
 you don't need to run a build step yourself. Pushing a file to `main` *is*
 publishing.
 
+Live at **https://lilyzhaang.github.io/**. This repo is named
+`lilyzhaang.github.io`, which is what makes GitHub serve it at the root
+address instead of under `/<repo-name>/`. Old `lilyzhaang.github.io/puddles/...`
+links are redirected to the same page here by the separate
+[`puddles`](https://github.com/lilyzhaang/puddles) repo.
+
 ## One-time setup
 
-1. Create a new GitHub repository and push everything in this folder to it.
+1. Create a GitHub repository named `<your-username>.github.io` and push
+   everything in this folder to it.
 2. In the repo, go to **Settings → Pages**. Under "Build and deployment,"
    set Source to **Deploy from a branch**, branch **main**, folder **/ (root)**.
 3. Wait a minute or two, then your site is live at
-   `https://<your-username>.github.io/<repo-name>/`.
+   `https://<your-username>.github.io/`.
 4. Edit `_config.yml`: change `title` to your name.
 
 ## Everyday use
