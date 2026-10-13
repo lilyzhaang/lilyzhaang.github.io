@@ -177,3 +177,9 @@ html.lb-open{overflow:hidden; scrollbar-gutter:stable;}
 ::view-transition-group(theme-glow){animation:none; mix-blend-mode:screen;}
 ::view-transition-old(theme-glow){display:none;}
 ::view-transition-new(theme-glow){animation:none;}
+
+/* Arriving on a project page from elsewhere on the site, the project card gently floats up
+   (page-transition.js adds .card-float). */
+html.card-float .detail-win{animation:card-float 1.5s cubic-bezier(.22,.61,.36,1) both;}
+@keyframes card-float{from{opacity:0; transform:translateY(28px);}}
+@media (prefers-reduced-motion: reduce){ html.card-float .detail-win{animation:none;} }
