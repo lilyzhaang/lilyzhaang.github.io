@@ -17,7 +17,10 @@
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{margin:0; background:var(--grad) fixed; color:var(--ink); font-family:'Lora',Georgia,serif; line-height:1.6; -webkit-font-smoothing:antialiased; min-height:100vh;}
+body{margin:0; background:var(--win-solid); color:var(--ink); font-family:'Lora',Georgia,serif; line-height:1.6; -webkit-font-smoothing:antialiased; min-height:100vh;}
+/* The gradient lives on its own fixed layer behind the page. (background-attachment:fixed on body
+   made some browsers drop chunks of it, leaving white patches, when the page repainted.) */
+body::before{content:''; position:fixed; inset:0; z-index:-1; background:var(--grad); pointer-events:none;}
 ::selection{background:var(--accent); color:#20180f;}
 a{color:var(--link);} a:visited{color:var(--visited);}
 a{text-decoration-thickness:1px; text-underline-offset:2px;}
@@ -156,7 +159,7 @@ html.lb-open{overflow:hidden; scrollbar-gutter:stable;}
 }
 
 .hero h1 .scatter-word{display:inline-block; white-space:nowrap;}
-.hero h1 .scatter-letter{display:inline-block; will-change:transform;}
+.hero h1 .scatter-letter{display:inline-block;}
 
 /* Theme switch: the new theme is revealed through a huge, soft ellipse centered below the page.
    theme.js sets the shape (--sun-w, --sun-drop, --sun-soft) and animates its height (--sun). */
