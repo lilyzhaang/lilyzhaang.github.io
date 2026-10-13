@@ -9,8 +9,8 @@ export const config = {
   lift: 12,         // max upward kick
   rotate: 16,       // max tilt, in degrees
   randomness: 0.53, // 0 = straight away from cursor, 1 = up to ±90° off
-  bounce: 0.29,     // spring bounciness, 0–1
-  duration: 0.92,   // spring visual duration, seconds
+  bounce: 0.8,      // spring bounciness, 0–1
+  duration: 0.6,    // spring visual duration, seconds
 };
 
 const title = document.querySelector(".hero h1");
