@@ -1,5 +1,3 @@
-try{ const t=localStorage.getItem('theme'); if(t) document.documentElement.setAttribute('data-theme',t); }catch(e){}
-
 // The new theme is revealed through a huge, soft ellipse whose center sits below the page,
 // so only the top of its curve shows, like the sun on the horizon. Going light, the sun
 // rises; going dark, it sinks. A glow rides the soft edge.
