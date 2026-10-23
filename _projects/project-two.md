@@ -5,7 +5,7 @@ slug: handmade-website
 status: sunset
 year: "2022"
 role: solo build, with love
-order: 2
+order: 3
 summary: once upon a time, I made a website by hand
 stack: [html css love]
 links:

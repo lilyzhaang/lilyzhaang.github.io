@@ -5,7 +5,7 @@ slug: svs-decks
 status: archived
 year: "2020-2023"
 role: school mentorship!
-order: 3
+order: 4
 summary: My first foray into startups and vc
 stack: [figma, teamwork, pitchbook, crunchbase, etc.]
 links:

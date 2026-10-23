@@ -5,7 +5,7 @@ slug: tarot-calendar
 status: live
 year: "2026"
 role: solo build
-order: 1
+order: 2
 summary: An easy way to log my tarot spread
 stack: [gemini, google calendar, apps script]
 gallery:
